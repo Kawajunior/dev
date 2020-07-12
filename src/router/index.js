@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Weer from '../views/Weer.vue'
 
 Vue.use(VueRouter)
 
@@ -19,7 +20,12 @@ Vue.use(VueRouter)
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
     }
-  }
+  },
+  {
+    path: '/weer',
+    name: 'Weer',
+    component: Weer
+  },
 ]
 
 const router = new VueRouter({
